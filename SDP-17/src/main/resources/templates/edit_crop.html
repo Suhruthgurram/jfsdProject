@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Crop</title>
+</head>
+<body>
+    <h1>Edit Crop</h1>
+    <form th:action="@{/admin/crop/edit/{id}(id=${crop.id})}" method="post">
+        <label>Crop Name:</label>
+        <input type="text" name="cropName" th:value="${crop.cropName}" required>
+        <br>
+        <label>Crop Type:</label>
+        <input type="text" name="cropType" th:value="${crop.cropType}" required>
+        <br>
+        <label>Price Per Kg:</label>
+        <input type="number" name="pricePerKg" th:value="${crop.pricePerKg}" required>
+        <br>
+        <button type="submit">Update Crop</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <a href="/admin/crop/add">Add New Crop</a>
+    <table border="1">
+        <tr>
+            <th>Image</th>
+            <th>Crop Name</th>
+            <th>Crop Type</th>
+            <th>Price Per Kg</th>
+            <th>Actions</th>
+        </tr>
+        <tbody>
+            <th:block th:each="crop : ${crops}">
+                <tr>
+                    <td th:text="${crop.image}"></td>
+                    <td th:text="${crop.cropName}"></td>
+                    <td th:text="${crop.cropType}"></td>
+                    <td th:text="${crop.pricePerKg}"></td>
+                    <td>
+                        <a th:href="@{/admin/crop/edit/{id}(id=${crop.id})}">Edit</a>
+                        <form th:action="@{/admin/crop/delete/{id}(id=${crop.id})}" method="post">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources for Farmers</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9; /* Light gray background */
+            color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50; /* Green color */
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #333;
+            margin: 20px 0 10px;
+            font-size: 1.5rem;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff; /* White text */
+            background-color: #4CAF50; /* Green background */
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-bottom: 20px;
+        }
+
+        a:hover {
+            background-color: #45a049; /* Darker green on hover */
+            transform: translateY(-2px); /* Lift effect on hover */
+        }
+
+        /* Logout Button Styles */
+        .logout-btn {
+            display: inline-block;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .logout-btn a {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff; /* White text color */
+            background-color: #ff4d4d; /* Red background */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: bold;
+        }
+
+        .logout-btn a:hover {
+            background-color: #e60000; /* Darker red on hover */
+            transform: scale(1.05); /* Slightly enlarge the button */
+        }
+
+        .logout-btn a:active {
+            background-color: #cc0000; /* Even darker red when clicked */
+            transform: scale(1); /* Reset scale when clicked */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            a {
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Resources for Farmers</h1>
+
+    <h2>1) Agriculture Articles</h2>
+    <a href="/farmer/articles">Read Articles</a>
+
+    <h2>2) Farming Videos</h2>
+    <a href="/farmer/videos">Watch Farming Videos</a>
+
+    <h2>3) Farming Tips</h2>
+    <a href="/farmer/tips">Read Tips</a>
+
+    <div class="logout-btn">
+        <a href="/farmer/login" class="logout-btn">Logout</a>
+    </div>
+</body>
+</html>
